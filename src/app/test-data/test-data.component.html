@@ -1,0 +1,105 @@
+<div class="img">
+  <div class="container contact-form">
+    <form #dataForm="ngForm" (ngSubmit)="createSnippet()">
+          <h3>Create Your Snippet</h3>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <input class="form-control" name="title" #title="ngModel" ngModel placeholder="Title..." required/>
+                  </div>
+                  <div class="form-group">
+                      <select class="form-control" name="programmL" #programmL="ngModel" ngModel required>
+                          <option value="null" disabled="true" [selected]="true">Choose language...</option>
+                          <option>C</option>
+                          <option>C#</option>
+                          <option>C++</option>
+                          <option>CSS</option>
+                          <option>CSV</option>
+                          <option>Clojure</option>
+                          <option>CoffeeScript</option>
+                          <option>ColdFusion</option>
+                          <option>Crystal</option>
+                          <option>Cypher</option>
+                          <option>D</option>
+                          <option>Dart</option>
+                          <option>Diff</option>
+                          <option>Docker</option>
+                          <option>Erlang</option>
+                          <option>F#</option>
+                          <option>Fortran</option>
+                          <option>Gherkin</option>
+                          <option>Go</option>
+                          <option>Groovy</option>
+                          <option>HTML</option>
+                          <option>Handlebars</option>
+                          <option>Haskell</option>
+                          <option>Haxe</option>
+                          <option>Java</option>
+                          <option>JavaScript</option>
+                          <option>Julia</option>
+                          <option>Kotlin</option>
+                          <option>LaTeX</option>
+                          <option>Lisp</option>
+                          <option>Lua</option>
+                          <option>MATLAB</option>
+                          <option>MUMPS</option>
+                          <option>Markdown</option>
+                          <option>OCaml</option>
+                          <option>Objective-C</option>
+                          <option>PHP</option>
+                          <option>Pascal</option>
+                          <option>Perl</option>
+                          <option>Pig</option>
+                          <option>Post</option>
+                          <option>PowerShell</option>
+                          <option>Puppet</option>
+                          <option>Python</option>
+                          <option>R</option>
+                          <option>Ruby</option>
+                          <option>Rust</option>
+                          <option>SQL</option>
+                          <option>Sass</option>
+                          <option>Scala</option>
+                          <option>Scheme</option>
+                          <option>Shell</option>
+                          <option>Smalltalk</option>
+                          <option>Swift</option>
+                          <option>TSV</option>
+                          <option>TypeScript</option>
+                          <option>VB.NET</option>
+                          <option>VBScript</option>
+                          <option>Velocity</option>
+                          <option>Verilog</option>
+                          <option>XML</option>
+                          <option>YAML</option>
+                          <option>Undefined</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <textarea class="form-control" name="notes" #notes="ngModel" ngModel placeholder="Notes..." style="width: 100%; height: 80px;"></textarea>
+
+                  </div>
+                  <div class="form-check form-check-inline check-style">
+                    <input (click)="isDataPrivate(false)" class="form-check-input" type="radio" name="isPrivate" id="inlineRadio1" value="false" #isPrivate="ngModel" ngModel>
+                    <label class="form-check-label" for="inlineRadio1">Public snippet</label>
+                  </div>
+                  <div class="form-check form-check-inline check-style">
+                    <input (click)="isDataPrivate(true)" class="form-check-input" type="radio" name="isPrivate" id="inlineRadio2" value="true" #isPrivate="ngModel" ngModel>
+                    <label class="form-check-label" for="inlineRadio2">Private snippet</label>
+                  </div>
+                  <div class="form-group">
+                      <input type="submit" name="btnSubmit" class="btn btn-success" value="Submit" [disabled]="!dataForm.valid"/>
+                      <input type="reset" name="btnReset" class="btn btn-danger" value="Reset" (click)="resetForm()"/>
+
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <textarea class="form-control" name="code" #code="ngModel" ngModel placeholder="Code" style="width: 130%; height: 270px;" required></textarea>
+                  </div>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+

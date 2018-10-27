@@ -1,0 +1,24 @@
+.img {
+  background: url("assets/img/home-cover.jpg") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logreg-btn {
+  display: block;
+  margin-top: 6%;
+  margin-right: 2%;
+  border: 1px solid rgba(220, 233, 235, 1);
+  color: rgba(220, 233, 235, 1);
+}
+
+.login-design {
+  background-color: #08110c;
+  opacity: 0.92;
+  border-radius: 10px;
+  border: 1px solid rgba(220, 233, 235, 1);
+}

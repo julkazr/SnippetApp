@@ -1,0 +1,24 @@
+<div class="img">
+  <table class="table table-striped table-dark">
+    <thead>
+        <input type="text" class="form-control" name="searchString" placeholder="Type to search by Full Name" [(ngModel)]="searchString">
+        <tr>
+            <th id="fullName"scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of usersList | async | filterr : 'fullName' : searchString | paginate: { itemsPerPage: 10, currentPage: p }; index as i">
+      <td class="fullName">{{user.fullName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.status}}</td>
+      <td><button class="btn btn-success"> Update </button></td>
+      <td><button *ngIf="!user.isBlocked" type="button" class="btn btn-danger" (click)="onBlock(user.id)"> Block </button>
+          <button *ngIf="user.isBlocked" type="button" class="btn btn-success" (click)="unblockUser(user.id)"> Unblock </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="p = $event" class="my-pagination bckg-color"></pagination-controls>
+</div>

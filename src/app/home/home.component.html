@@ -1,0 +1,11 @@
+<div class="img">
+  <app-login></app-login>
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-6 login-design my-style py-4" *ngIf="isBlocked | async">
+      <h3 class="text-center"  style="color: #dc3545" *ngIf="isBlocked | async">
+        Your account is blocked because of inappropriate content of your snippet!
+      </h3>
+    </div>
+  </div>
+</div>
+

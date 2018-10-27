@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#000; border-bottom:4px solid rgba(220, 233, 235, 0.8); height: 100px;">
+  <a class="navbar-brand" routerLink="/my-snippets" >
+      <img src="../../assets/img/logo.jpg" alt=""> </a>
+      <ng-container *ngIf="signedIn | async">
+          <a class="nav-link-1">Hello, {{ user.displayName }}</a>
+      </ng-container>
+<div ngbDropdown class="d-inline-block hidden-lg space">
+  <button class="btn bg-light" id="dropdownBasic1" ngbDropdownToggle>
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div ngbDropdownMenu aria-labelledby="dropdownBasic1" *ngIf="user && !(isBlocked | async)">
+    <a class="dropdown-item" [routerLink]="['test-data']">Create Snippet</a>
+    <a class="dropdown-item" [routerLink]="['test-data-list']">Snippets List</a>
+    <a class="dropdown-item" [routerLink]="['my-snippets']">My Snippets</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" (click)='logOut()'>
+      <i class="fas fa-sign-out-alt"></i>
+      Logout</a>
+  </div>
+</div>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul *ngIf="user && !(isBlocked | async)" class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/test-data">Create Snippet</a>
+          </li>
+          <li class="nav-item color">
+              <a class="nav-link" routerLink="/test-data-list">Snippets List</a>
+          </li>
+          <li class="nav-item color">
+              <a class="nav-link" routerLink="/my-snippets">My Snippets </a>
+          </li>
+
+    <li class="nav-item">
+      <a class="nav-item nav-link disabled cursor" (click)='logOut()'><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </li>
+    <div class="dropdown">
+      <button class="dropbtn btn btn-success" *ngIf="user && isAdmin | async">Administrator
+        <i class="fas fa-arrow-circle-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a routerLink="/admin-panel" >Update Users</a>
+        <a routerLink="/admin-snippets">Update Snippets</a>
+      </div>
+    </div>
+  </ul>
+</div>
+</nav>
+

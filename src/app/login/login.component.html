@@ -1,0 +1,35 @@
+<div class="container col-lg-4">
+  <div class="login-container">
+      <div class= "login-design">
+          <h2>
+            <i class="fas fa-sign-in-alt"></i>
+             Login</h2>
+          <form name="form" (ngSubmit)="loginForm.form.valid && logIn()" #loginForm="ngForm">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email"  [(ngModel)]="user.email" id="email" email class="form-control" appCustomEmailValidator required #email="ngModel"  />
+              <p class="text-lg-left ml-2"  style="color: #dc3545" *ngIf="email.invalid && email.touched">Email is required, please provide a valid email address.</p>
+            </div>
+            <div class="form-group" >
+              <label for="password">Password</label>
+              <input type="password" [(ngModel)]="user.password" name="password" id="password" class="form-control" minlength="6" required #password="ngModel" />
+              <p class="text-lg-left ml-2"  style="color: #dc3545" *ngIf="password.invalid && password.dirty">Password must have minimum 6 characters.</p>
+              <p class="text-lg-left ml-2"  style="color: #dc3545" *ngIf="password.invalid && password.touched">Password is required.</p>
+            </div>
+            <p class="text-lg-left ml-2" style="color: #dc3545">{{ errorMessage }}</p>
+            <br>
+            <div class="form-actions">
+              <button class="btn btn-success">Login</button>
+            </div>
+            <br> <br>
+            <div class="link-reg">
+             <a class="route-to-register" routerLink="/register">
+               <i class="fas fa-user"></i>
+                If you don't have an account please register here</a>
+            </div>
+            <br>
+          </form>
+      </div>
+  </div>
+  </div>
+

@@ -1,0 +1,7 @@
+.img {
+  background: url("assets/img/not-found.jpg") center center no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}

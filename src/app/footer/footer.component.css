@@ -1,0 +1,26 @@
+footer {
+  background-color: #000;
+  color: rgba(220, 233, 235, 1);
+  position: fixed;
+  bottom: 0;
+  min-width: 100%;
+  border-top: 1px solid rgba(220, 233, 235, 0.8);
+  border-bottom: 1px solid rgba(220, 233, 235, 0.8);
+  margin-top : 20px;
+}
+
+.list-inline-item {
+  font-size: 30px;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  margin-left: 8px;
+}
+
+a {
+  color: rgba(220, 233, 235, 0.8);
+}
+
+.d-inline-block {
+  font-size: 14px;
+  padding-top: 10px;
+}
