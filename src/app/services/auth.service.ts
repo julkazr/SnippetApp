@@ -92,14 +92,16 @@ export class AuthService {
     return this._signedInUser$;
   }
 
-  routeProtected(): Observable<boolean> {
+  routeProtected(isLoginPage?: boolean): Observable<boolean> {
     return new Observable(observer => {
       this._afAuth.authState.subscribe(firebaseUser => {
         if (firebaseUser) {
           observer.next(true);
         } else {
           observer.next(false);
-          // this._location.back();
+          if (isLoginPage) {
+            this._location.back();
+          }
         }
       });
     });

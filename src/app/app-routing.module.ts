@@ -16,15 +16,16 @@ import { FooterComponent } from './footer/footer.component';
 
 import { ProtectedRouteGuard } from './guards/protected-route.guard';
 import { IsAdminGuardGuard } from './guards/is-admin-guard.guard';
+import { LoginRouteGuard } from './guards/login-route.guard';
 
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'login' , component: LoginComponent },
+  { path: 'login' , component: LoginComponent, canActivate: [LoginRouteGuard] },
   { path: 'register' , component: RegisterComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'test-data', component: TestDataComponent, canActivate: [ProtectedRouteGuard] },
   { path: 'test-data-list', component: TestDataListComponent, canActivate: [ProtectedRouteGuard]  },
-  { path: 'test-data-details/:id', component: TestDataDetailsComponent, canActivate: [ProtectedRouteGuard] },
+  { path: 'test-data-details/:id', component: TestDataDetailsComponent },
   { path: 'home', component: HomeComponent },
   { path: 'admin-panel', component: AdminPanelComponent, canActivate: [ProtectedRouteGuard, IsAdminGuardGuard] },
   { path: 'admin-snippets', component: AdminSnippetsComponent, canActivate: [ProtectedRouteGuard, IsAdminGuardGuard] },
