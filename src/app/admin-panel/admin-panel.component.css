@@ -10,7 +10,7 @@
 }
 
 table {
-  color:rgba(220, 233, 235, 1);
+  color: rgba(220, 233, 235, 1);
   margin-top: 100px;
 }
 
@@ -34,5 +34,5 @@ tr {
 
 tr > th {
   color: #4CAF50;
-  font-size: 1vw;
+  font-size: 18px;
 }

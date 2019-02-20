@@ -18,8 +18,8 @@ tr {
     font-size: 18px;
 }
 
-.contact-form {
-    /* background: #fff; */
+/* .contact-form {
+    /* background: #fff; *
     margin-top: 10%;
     margin-bottom: 5%;
     width: 50%;
@@ -48,11 +48,11 @@ tr {
     margin-right: 15px;
     border-radius: 4px !important;
     background-color: #dc3545;
-}
+} */
 
-table.table-sm.table-hover {
+/* table.table-sm.table-hover {
     border-bottom: 1px solid black;
-}
+} */
 
 .btn.btn-success {
     margin-right: 10px !important;
@@ -87,5 +87,5 @@ ul .ngx-pagination {
 
 tr > th {
     color: #4CAF50;
-    font-size: 1vw;
+    font-size: 18px;
 }
