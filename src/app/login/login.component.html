@@ -1,9 +1,7 @@
-<div class="container col-lg-4">
-  <div class="login-container">
-      <div class= "login-design">
-          <h2>
-            <i class="fas fa-sign-in-alt"></i>
-             Login</h2>
+<div class="container-fluid p-0">
+  <div class="d-flex justify-content-center m-auto img">
+      <div class="col-lg-4 d-flex flex-column justify-content-center login-design">
+          <h2 class="text-center"><i class="fas fa-sign-in-alt"></i>Login</h2>
           <form name="form" (ngSubmit)="loginForm.form.valid && logIn()" #loginForm="ngForm">
             <div class="form-group">
               <label for="email">Email</label>
@@ -17,19 +15,17 @@
               <p class="text-lg-left ml-2"  style="color: #dc3545" *ngIf="password.invalid && password.touched">Password is required.</p>
             </div>
             <p class="text-lg-left ml-2" style="color: #dc3545">{{ errorMessage }}</p>
-            <br>
-            <div class="form-actions">
+            <div class="d-flex justify-content-center p-2">
               <button class="btn btn-success">Login</button>
             </div>
-            <br> <br>
-            <div class="link-reg">
-             <a class="route-to-register" routerLink="/register">
-               <i class="fas fa-user"></i>
+            <div class="text-center p-4">
+            <a class="route-to-register" routerLink="/register">
+              <i class="fas fa-user"></i>
                 If you don't have an account please register here</a>
             </div>
             <br>
           </form>
       </div>
   </div>
-  </div>
+</div>
 

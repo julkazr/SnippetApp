@@ -20,7 +20,7 @@ import { LoginRouteGuard } from './guards/login-route.guard';
 
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'login' , component: LoginComponent, canActivate: [LoginRouteGuard] },
+  { path: 'login' , component: LoginComponent },
   { path: 'register' , component: RegisterComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'test-data', component: TestDataComponent, canActivate: [ProtectedRouteGuard] },

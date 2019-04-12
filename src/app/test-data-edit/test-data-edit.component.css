@@ -1,57 +1,21 @@
 .img {
   background: url("assets/img/details-image.jpg") center center no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
-.contact-form {
-  margin-top: 5%;
-  margin-bottom: -5%;
-  width: 100%;
-}
-
-.contact-form .form-control {
-  border-radius: 1rem;
-}
-
-.contact-form form {
-  padding: 3%;
-}
-
-.contact-form form .row {
-  margin-bottom: -7%;
-}
-
-.contact-form h4 {
-  margin-bottom: 5%;
-  margin-top: 3%;
-  text-align: center;
+h4 {
+  margin-top: 20vh;
   color: rgba(220, 233, 235, 1);
-  font-size: 1.8vw;
-}
-
-table.table-sm.table-hover {
-  border-bottom: 1px solid black;
-}
-
-.btn.btn-success {
-  margin-top: 15px;
-  padding: 4px 20px 4px 20px !important;
-}
-
-#second-button {
-  margin-left: 15px;
-}
-
-table.table-sm.table-hover {
-  cursor: pointer;
 }
 
 label {
   color: rgba(220, 233, 235, 1);
+}
+
+.bottom-margin {
+  margin-bottom: 25vh;
+  margin-left: 10vw;
 }

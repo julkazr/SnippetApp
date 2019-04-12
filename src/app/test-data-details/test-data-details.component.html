@@ -1,33 +1,36 @@
-<div class="img">
-  <div class="container contact-form">
-      <form #dataForm="ngForm">
-          <h4>Snippet Details</h4>
-          <div class="row">
-              <div class="col-md-6">
-                  <label>Title</label>
-                  <div class="form-group">
-                      <input class="form-control" name="title" #title="ngModel" [(ngModel)]="data.title" disabled/>
-                  </div>
-                  <div class="form-group">
-                      <label>Language</label>
-                      <input class="form-control" name="programmL" #programmL="ngModel" [(ngModel)]="data.programmL" disabled>
-                  </div>
-                  <div class="form-group">
-                      <label>Notes</label>
-                      <textarea class="form-control" name="notes" #notes="ngModel" [(ngModel)]="data.notes" style="width: 100%; height: 135px;" disabled></textarea>
-                  </div>
-                  <div class="form-group">
-                      <input class="navbar-brand" class="btn btn-success" value="Back" (click)='backClicked()'>
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <label>Code</label>
-                  <div class="form-group">
-                      <textarea class="form-control" name="code" #code="ngModel" [(ngModel)]="data.code" style="width: 120%; height: 353px;" disabled></textarea>
-                  </div>
-              </div>
-
-          </div>
-      </form>
-  </div>
+<div class="container-fluid p-0">
+    <div class="img p-0">
+        <div class="d-flex justify-content-center m-auto p-0">
+            <div class="col-md-9 flex-column p-0">
+                <h4 class="text-center">Snippet Details</h4>
+                <form #dataForm="ngForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Title</label>
+                                <input class="form-control" name="title" #title="ngModel" [(ngModel)]="data.title" disabled/>
+                            </div>
+                            <div class="form-group">
+                                <label>Language</label>
+                                <input class="form-control" name="programmL" #programmL="ngModel" [(ngModel)]="data.programmL" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label>Notes</label>
+                                <textarea class="form-control" name="notes" #notes="ngModel" [(ngModel)]="data.notes" rows="5" disabled></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Code</label>
+                            <div class="form-group">
+                                <textarea class="form-control" name="code" #code="ngModel" [(ngModel)]="data.code" rows="12" disabled></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group mx-auto back-button-margin">
+                            <input class="navbar-brand" class="btn btn-success" value="Back" (click)='backClicked()'>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

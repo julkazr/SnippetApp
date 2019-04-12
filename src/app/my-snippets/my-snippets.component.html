@@ -1,38 +1,42 @@
-<div class="img">
-  <div class="container contact-form">
-      <div class="contact-form">
-          <h3 class="text-center">My Snippets</h3>
-      </div>
-      <div class="row">
-        <div class="col-6">
-      <input class="form-control mb-3"  name="searchString" [(ngModel)]='searchString' type="text" id="filter" placeholder="Search by title">
+<div class="container-fluid p-0">
+    <div class="img p-0">
+        <div class="d-flex justify-content-center m-auto p-0">
+            <div class="col-md-9 flex-column p-0">
+                <h4 class="text-center mb-4">My Snippets</h4>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input class="form-control mb-3"  name="searchString" [(ngModel)]='searchString' type="text" id="filter" placeholder="Search by title">
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="form-control mb-3"  name="filterString" [(ngModel)]='filterString' type="text" id="filters" placeholder="Search by programming language">
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">Title</th>
+                                <th scope="col">Notes</th>
+                                <th scope="col">Programm Language</th>
+                                <th>Operation Buttons</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of filteredList | sortByDate | filterr : 'title' : searchString | filterAndSort : 'programmL' : filterString | paginate: { itemsPerPage: 8, currentPage: p }">
+                                <td [routerLink]="['/test-data-details', data.uid]">{{data.title}}</td>
+                                <td [routerLink]="['/test-data-details', data.uid]">{{data.notes | slice: 0: 20}}...</td>
+                                <td [routerLink]="['/test-data-details', data.uid]">{{data.programmL}}</td>
+                                <td>
+                                    <button class="btn btn-success" [routerLink]="['/test-data-edit', data.uid]">Edit</button>
+                                    <button class="btn btn-danger" (click)="deleteSnippet(data.uid)">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <pagination-controls (pageChange)="p = $event" class="my-pagination"></pagination-controls>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-6">
-      <input class="form-control mb-3"  name="filterString" [(ngModel)]='filterString' type="text" id="filters" placeholder="Search by programming language">
-    </div>
-      </div>
-                      <table class="table table-striped table-dark">
-                          <thead>
-                              <tr>
-                                  <th scope="col">Title</th>
-                                  <th scope="col">Notes</th>
-                                  <th scope="col">Programm Language</th>
-                                  <th>Operation Buttons</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr *ngFor="let data of filteredList | sortByDate | filterr : 'title' : searchString | filterAndSort : 'programmL' : filterString | paginate: { itemsPerPage: 8, currentPage: p }">
-                                  <td class="title" [routerLink]="['/test-data-details', data.uid]">{{data.title}}</td>
-                                  <td [routerLink]="['/test-data-details', data.uid]">{{data.notes | slice: 0: 20}}...</td>
-                                  <td class="programmL" [routerLink]="['/test-data-details', data.uid]">{{data.programmL}}</td>
-                                  <td>
-                                      <button class="btn btn-success" [routerLink]="['/test-data-edit', data.uid]">Edit</button>
-                                      <button class="btn btn-danger" (click)="deleteSnippet(data.uid)">Delete</button>
-                                  </td>
-                              </tr>
-                          </tbody>
-                      </table>
-                      <pagination-controls (pageChange)="p = $event" class="my-pagination"></pagination-controls>
-          </div>
 </div>
 

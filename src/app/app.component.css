@@ -1,0 +1,14 @@
+.d-flex {
+    height: 100vh;
+}
+
+.flex-fill {
+    height: calc(100vh - 209px);
+}
+.img {
+    background: url("assets/img/home-cover.jpg") center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100%;
+    z-index: -10;
+  }

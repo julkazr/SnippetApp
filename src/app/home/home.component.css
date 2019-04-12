@@ -1,19 +1,26 @@
-.img {
-  background: url("assets/img/home-cover.jpg") center center no-repeat;
-  background-size: cover;
-  width: 100%;
-  min-height: 100vh;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
+* {
+  /* So 100% means 100% */
+  box-sizing: border-box;
 }
-.logreg-btn {
-  display: block;
-  margin-top: 6%;
-  margin-right: 2%;
-  border: 1px solid rgba(220, 233, 235, 1);
+
+.img {
+  height: calc(100vh - 209px); 
+  z-index: -1;
+}
+
+.paragraph-style {
+  width: 50%;
   color: rgba(220, 233, 235, 1);
+  font-size: 28px;
+  background-color: #08110c;
+  opacity: 0.92;
+  border: 1px solid rgba(220, 233, 235, 1);
+  border-radius: 10px;
+}
+
+.admin-demo {
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .login-design {

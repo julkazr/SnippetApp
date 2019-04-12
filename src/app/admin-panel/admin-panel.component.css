@@ -1,38 +1,26 @@
 .img {
   background: url("assets/img/adm-bg-image.jpg") center center no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
+}
+
+h4 {
+  margin-top: 20vh;
+  color:rgba(220, 233, 235, 1);
 }
 
 table {
-  color:rgba(220, 233, 235, 1);
-  margin-top: 100px;
-}
-
-.fullName {
-  padding-left: 50px;
-}
-
-#fullName {
-  padding-left: 50px;
-}
-
-tr {
-  font-size: 18px;
+  cursor: pointer;
 }
 
 .my-pagination {
   display: flex;
   justify-content: center;
-  margin-bottom:91px;
+  margin-bottom: 25vh;
 }
 
 tr > th {
   color: #4CAF50;
-  font-size: 1vw;
 }
