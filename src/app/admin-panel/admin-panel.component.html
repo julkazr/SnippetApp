@@ -18,7 +18,7 @@
                 <tbody>
                   <tr *ngFor="let user of usersList | async | filterr : 'fullName' : searchString | paginate: { itemsPerPage: 10, currentPage: p }; index as i">
                     <td class="fullName">{{user.fullName}}</td>
-                    <td>{{user.email}}</td>
+                    <td><a href="mailto:{{user.email}}">{{user.email}}</a></td>
                     <td>{{user.status}}</td>
                     <td><button class="btn btn-success"> Update </button></td>
                     <td><button *ngIf="!user.isBlocked" type="button" class="btn btn-danger" (click)="onBlock(user.id)"> Block </button>
