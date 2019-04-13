@@ -8,6 +8,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './/app-routing.module';
+import { HighlightJsModule } from 'ngx-highlight-js';
 
 import { AppComponent } from './app.component';
 import { environment } from 'environments/environment';
@@ -63,7 +64,8 @@ import { TestDataComponent } from './test-data/test-data.component';
     AngularFireAuthModule,
     NgxPaginationModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HighlightJsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

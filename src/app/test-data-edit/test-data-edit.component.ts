@@ -16,6 +16,7 @@ export class TestDataEditComponent implements OnInit {
   data: DataTest;
   eventSub: Subscription;
   uid: string;
+  language: string;
 
   constructor(private _dataService: TestDataService,
               private _router: Router,
@@ -27,7 +28,9 @@ export class TestDataEditComponent implements OnInit {
         this._dataService.getSnippet(this.uid).subscribe((data: DataTest) => {
             data.uid = this.uid;
             this.data = data;
-        });
+            this.language = this.data.programmL;
+            console.log(this.language);
+  });
 
   }
 

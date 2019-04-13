@@ -13,6 +13,7 @@ export class TestDataDetailsComponent implements OnInit {
   data: DataTest;
   uid: string;
   list: DataTest;
+  language: string;
 
   constructor(private _location: Location,
               private _route: ActivatedRoute,
@@ -24,6 +25,7 @@ export class TestDataDetailsComponent implements OnInit {
         this._dataService.getSnippet(this.uid).subscribe((data: DataTest) => {
             data.uid = this.uid;
             this.data = data;
+            this.language = this.data.programmL;
         });
 
   }
