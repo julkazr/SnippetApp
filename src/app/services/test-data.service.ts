@@ -20,7 +20,6 @@ export class TestDataService {
       if (user) {
         this.userId = user.uid;
         this.author = user.displayName;
-        console.log(this.userId);
       }
     });
   }

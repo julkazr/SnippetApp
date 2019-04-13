@@ -37,7 +37,6 @@ export class AuthService {
       delete newUser.password;
       this._userService.createUser(newUser);
       this._userService.updateUserStatus(user.uid, UserStatus.Active);
-      console.log(newUser);
       this._router.navigate(['/test-data-list']);
     });
   }
@@ -62,10 +61,8 @@ export class AuthService {
         firebaseUser => {
           afSubscription.unsubscribe();
           this.signedInUser = firebaseUser;
-          console.log(this.signedInUser);
           this._userService.updateUserStatus(firebaseUser.uid, UserStatus.Active);
           this.user = firebaseUser;
-          console.log(this.user);
           if (this.user.isBlocked === false) {
             this._router.navigate(['/my-snippets']);
           }

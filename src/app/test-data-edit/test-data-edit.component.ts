@@ -29,8 +29,7 @@ export class TestDataEditComponent implements OnInit {
             data.uid = this.uid;
             this.data = data;
             this.language = this.data.programmL;
-            console.log(this.language);
-  });
+        });
 
   }
 
@@ -40,8 +39,6 @@ export class TestDataEditComponent implements OnInit {
 
    isDataPrivate(p: boolean): void {
     this.data.isPrivate = p;
-
-    console.log(this.data.isPrivate);
   }
 
   onSubmit() {

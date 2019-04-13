@@ -36,7 +36,6 @@ export class MySnippetsComponent implements OnInit {
 
   ngOnInit(): void {
     this._dataService.getUserSnippets(this.userId).subscribe(list => {
-      console.log(list);
       this.filteredList = list;
       this._snippets = list;
     });
@@ -44,7 +43,6 @@ export class MySnippetsComponent implements OnInit {
   }
 
   deleteSnippet(uid) {
-    console.log( 'Uid: ' + uid);
       if (confirm('Are you sure to delete this record ?') === true) {
         const dataRef = this._db.object(`data/${uid}`);
         dataRef.remove();

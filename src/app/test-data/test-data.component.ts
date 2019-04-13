@@ -32,7 +32,6 @@ export class TestDataComponent implements OnInit {
 
   isDataPrivate(p: boolean): void {
       this.data.isPrivate = p;
-      console.log(this.data.isPrivate);
   }
 
 

@@ -19,7 +19,6 @@ export class AdminSnippetsComponent implements OnInit {
 
   ngOnInit(): void {
     this._dataService.getSnippets().valueChanges().subscribe(list => {
-      console.log(list);
       this.dataList = list.reverse();
     });
   }

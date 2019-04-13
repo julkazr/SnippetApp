@@ -19,7 +19,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.signupForm);
     this._authService.signUpWithEmailAndPassword(this.user);
   }
 

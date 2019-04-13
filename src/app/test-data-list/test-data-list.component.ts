@@ -19,7 +19,6 @@ export class TestDataListComponent implements OnInit {
 
   ngOnInit(): void {
     this._dataService.getPublicSnippets(this.publicSnippet).subscribe(list => {
-      console.log(list);
       this.dataList = list;
     });
 
